@@ -18,19 +18,33 @@ filetype plugin indent on
 highlight Identifier ctermfg=16
 highlight Comment ctermfg=22
 highlight PreProc ctermfg=52
-highlight Statement ctermfg=126
-highlight Type ctermfg=126
+highlight Statement ctermfg=125
+highlight Type ctermfg=125
 highlight LineNr ctermfg=244
 
 " Set C++11 syntax
 au BufNewFile,BufRead *.cpp set syntax=cpp11
+let c_no_curly_error=1
+
+au BufNewFile,BufRead *.go set syntax=go
+
+" Nerdtree like things
+let g:netrw_liststyle=3
 
 " Shows match when cursor goes over bracket
 " set showmatch
 
+" Toggle terminal mode
+noremap <C-d> :sh<cr>
+
+" Jump to function definition when typing <alt>]
+set tags=./.tags;
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
 " Ignore case if search is all lowercase
 set ignorecase
 set smartcase
+set noswapfile
 
 " Highlightes search and searches as you type
 set hlsearch
@@ -40,6 +54,9 @@ set incsearch
 " syn match parens /[(){}]/
 " hi parens ctermfg=red
 
+nnoremap <Leader>y "*y
+nnoremap <Leader>p "*p
+nnoremap <Leader>P "*P
 
 " Command to copy between files in vim
 vmap <silent> ,y y:new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/.vim_reg_for_copy.txt<CR>
@@ -47,9 +64,10 @@ nmap <silent> ,y :new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/.vim_reg
 map <silent> ,p :sview ~/.vim_reg_for_copy.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>p
 map <silent> ,P :sview ~/.vim_reg_for_copy.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>P
 
-
+" Match angled braces
+:set matchpairs+=<:>
 " Set column
-" set textwidth=80
+set textwidth=78
 
 " Moves the cursor down by visual line for example when the line wraps
 nnoremap j gj
@@ -59,11 +77,11 @@ nnoremap k gk
 set title
 
 " Shows the line numbers and the ruler at the bottom right of the screen
-:set number
+" :set number
 :set ruler
 
 " Maps escape to "jj"
-" :imap jj <Esc>
+:imap jj <Esc>
 " MAPPED CAPS LOCK TO ESC with Seil app
 " CHANGE BACK IF DISABLE CAPS LOCK
 
@@ -86,8 +104,16 @@ set showmode
 " Wraps cursor around the line so it goes past the end when scrolling
 set whichwrap+=<,>,h,l,[,] 
 
-" Maps : to ; so you can just type ";w" to save, etc.
+" Maps : to ; so you can just type ";w" to save, etc. Disabled \'
 nnoremap ; :
+" No weird behaviour
+nnoremap ' <nop>
+" Disable 'recording' mode
+nnoremap q <nop>
+" redo mapped to r
+" nnoremap r <C-r> 
+" Copy copies to clipboard
+" vmap y "+y
 
 " Maps "$" to "-" so you can go to the end of a line easily
 :map - $
@@ -121,7 +147,7 @@ function! Tab_Or_Complete()
     endif
 endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
-"set dictionary="/usr/dict/words"
+" set dictionary="~/.vim/words"
 
 " To map :q to :Q and :w to :W so both can be used for same purpose
 :command WQ wq
@@ -130,7 +156,7 @@ endfunction
 :command Q q
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <silent> <C-c> :nohl<CR><C-l>
 
 
 " To treat lines with only whitespace as blank
@@ -170,5 +196,13 @@ function! ParagraphMove(delta, visual, count)
 endfunction
 nnoremap <silent> } :<C-U>call ParagraphMove( 1, 0, v:count)<CR>
 onoremap <silent> } :<C-U>call ParagraphMove( 1, 0, v:count)<CR>
-nnoremap <silent> { :<C-U>call ParagraphMove(-1, 0, v:count)<CR>
+nnoremap <silent> { :<C-U>call ParagraphMove(-2, 0, v:count)<CR>
 onoremap <silent> { :<C-U>call ParagraphMove(-1, 0, v:count)<CR>
+
+" Bindings to switch from screen to screen by holding on to the control key
+" and pressing the arrow keys
+map <C-l> <C-W>l
+map <C-h> <C-W>h
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+
