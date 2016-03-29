@@ -1,2 +1,2 @@
-# vimrc
-A no-plugin custom vimrc
+# dotfiles
+All my important dotfiles
