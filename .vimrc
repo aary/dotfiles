@@ -207,5 +207,5 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 
 " Autocompletes braces and parentheses to add matching ones
-ino { {}<left>
-ino {<CR> {<CR>}<ESC>O
+" ino { {}<left>
+" ino {<CR> {<CR>}<ESC>O
