@@ -1,0 +1,1 @@
+textformat.vba: call delete('/Users/aary/.vim/autoload/textformat.vim')|call delete('/Users/aary/.vim/doc/textformat.txt')|call delete('/Users/aary/.vim/plugin/textformat.vim')
