@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/aary/Developer/cplusplus/varianttype/template_metaprogrammed_variant'
-let g:netrw_dirhist_2='/Users/aary/Developer/dotfiles'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/aary/Developer/eecs373finalproject/webserver/api/sql'
+let g:netrw_dirhist_2='/Users/aary/Developer/eecs373finalproject/.git'
+let g:netrw_dirhist_3='/Users/aary/Developer/eecs373finalproject/webserver'
+let g:netrw_dirhist_4='/Users/aary/Developer/eecs373finalproject'
+let g:netrw_dirhist_5='/Users/aary/Developer'
+let g:netrw_dirhist_6='/Users/aary/Developer/eecs373finalproject/cppsockets/.git'

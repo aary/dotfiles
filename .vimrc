@@ -209,3 +209,7 @@ map <C-k> <C-W>k
 " Autocompletes braces and parentheses to add matching ones
 " ino { {}<left>
 " ino {<CR> {<CR>}<ESC>O
+"
+au BufNewFile *.tex 0r ~/.vim/skeleton/tex.skeleton
+au BufNewFile *.hpp 0r ~/.vim/skeleton/hpp.skeleton
+au BufNewFile *.cpp 0r ~/.vim/skeleton/cpp.skeleton

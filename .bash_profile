@@ -10,7 +10,7 @@ alias cl="clear"
 alias lc="cl"
 alias curl="curl -i -w '\n'"                    # add new line and headers
 alias tree="tree -C -I 'venv'"
-alias cleanup="bash ~/.clean_up_files; clear"
+alias cleanup="find . -type f -iname \"*.pyc\" -delete"
 alias college="cd ~/Documents/UofM/Winter\ 2016"
 alias caen="ssh aary@login.engin.umich.edu"
 alias caensftp="sftp aary@login.engin.umich.edu"
@@ -45,3 +45,16 @@ export GOPATH=~/Developer/Go
 
 # added by Anaconda2 2.5.0 installer
 export PATH="/Users/aary/anaconda/bin:$PATH"
+
+function gitsubmoduleinit {
+    
+    git submodule init
+    git submodule update
+    git submodule foreach git pull origin master
+}
+
+# function cleanup {
+#     
+#     find . -type f -name "*.pyc" -delete
+#     find . -type f -name "*.DS_Store" -delete
+# }
