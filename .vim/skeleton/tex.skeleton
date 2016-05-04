@@ -4,7 +4,7 @@
 \usepackage{fancyhdr}
 \usepackage{titling}
 \pagestyle{fancy}
-\lhead{EECS 445 - Machine Learning}
+\lhead{Top bar topic}
 \rhead{\thepage}
 \usepackage{color}
 \usepackage{graphicx}
@@ -28,4 +28,9 @@
 % ********************************* HEADERS ***********************************
 
 \begin{document}
+\title{\textbf{Topic}}
+\author{Aaryaman Sagar (rmn100@gmail.com)}
+\date{}
+\maketitle
+
 \end{document}
