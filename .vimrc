@@ -22,8 +22,9 @@ highlight Statement ctermfg=125
 highlight Type ctermfg=125
 highlight LineNr ctermfg=244
 
-" Set C++11 syntax
+" Set C++11 and HTML syntax
 au BufNewFile,BufRead *.cpp set syntax=cpp11
+au BufNewFile,BufRead *.js set syntax=js
 let c_no_curly_error=1
 
 au BufNewFile,BufRead *.go set syntax=go
