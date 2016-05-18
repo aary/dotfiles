@@ -24,6 +24,7 @@ alias c="cl"
 alias developer="cd ~/Developer"
 alias reinit="source ~/.bash_profile"
 alias gitlistfiles="git ls-tree -r master --name-only"
+alias movies="cd ~/Movies"
 
 # UofM things
 alias uofm="cd ~/Doc*/U*M"
@@ -76,7 +77,7 @@ function flaskjs {
     printf "Created template web app in folder " && printf $1"\n"
 }
 
-# function cleanup { # WHY DOES THIS NOT WORK
+# function cleanup { # why does this not work??
 #     
 #     find . -type f -name "*.pyc" -delete
 #     find . -type f -name "*.DS_Store" -delete
