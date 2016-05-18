@@ -76,7 +76,7 @@ function flaskjs {
     printf "Created template web app in folder " && printf $1"\n"
 }
 
-# function cleanup {
+# function cleanup { # WHY DOES THIS NOT WORK
 #     
 #     find . -type f -name "*.pyc" -delete
 #     find . -type f -name "*.DS_Store" -delete
