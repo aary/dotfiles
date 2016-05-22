@@ -1,9 +1,8 @@
 # Aliases
-alias ls="ls -G -l"                             # Colorized output for ls
 alias cp="cp -i -v"                             # verbose and safe
 alias mv="mv -i -v"                             # verbose and safe
-alias l="ls"
-alias sl="ls"
+alias l="ls -G -l"                              # colorized and long
+alias sl="ls"                                   
 alias dc="cd"
 alias sublime="open -a Sublime\ Text\ 3"        # sublime text
 alias cl="clear"
