@@ -72,6 +72,7 @@ function flaskjs {
     mkdir $1
     cd $1
     cp -r ~/.templates/flaskjs/* ./ > /dev/null
+    virtualenv .venv > /dev/null
     cd ..
     printf "Created template web app in folder " && printf $1"\n"
 }
