@@ -11,15 +11,12 @@
         <title></title>
 
         <!-- jQuery -->
-        <script type="text/javascript"
-            src="./static/external/jquery.js"></script>
+        <script type="text/javascript"></script>
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="./static/external/bootstrap.css">
-        <script type="text/javascript"
-            src="./static/external/bootstrap.js"></script>
+        <link rel="stylesheet" href="">
+        <script type="text/javascript"></script>
         <!-- Handlebars -->
-        <script type="text/javascript"
-            src="./static/external/handlebars.js"></script>
+        <script type="text/javascript"></script>
     </head>
 
     <!-- Body -->
@@ -41,7 +38,7 @@
         </nav> <!-- navbar -->
 
         <!-- Add your own js scripts here -->
-        <script type="text/javascript" src=""></script>
+        <script type="text/javascript"></script>
 
     </body>
 
