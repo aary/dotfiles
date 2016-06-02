@@ -82,7 +82,7 @@ set title
 :set ruler
 
 " Maps escape to "jj"
-:imap jj <Esc>
+:imap fj <Esc>
 " MAPPED CAPS LOCK TO ESC with Seil app
 " CHANGE BACK IF DISABLE CAPS LOCK
 
