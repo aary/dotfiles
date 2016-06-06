@@ -25,6 +25,7 @@ highlight LineNr ctermfg=244
 " Set C++11 and HTML syntax
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 au BufNewFile,BufRead *.js set syntax=js
+au BufNewFile,BufRead *.thrift set syntax=thrift
 let c_no_curly_error=1
 
 au BufNewFile,BufRead *.go set syntax=go
