@@ -40,7 +40,7 @@ let g:netrw_liststyle=3
 noremap <C-d> :sh<cr>
 
 " Jump to function definition when typing <alt>]
-set tags=./.tags;
+set tags=./tags;,tags;
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Ignore case if search is all lowercase
