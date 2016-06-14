@@ -47,18 +47,8 @@ alias gccc="gcc -std=c99 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 # Customised and colorized prompt
 export PS1="\u:\W $ "                         # used to be "\h:\W \u\$"
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/aary/google-cloud-sdk/path.bash.inc'
-
-# The next line enables bash completion for gcloud.
-source '/Users/aary/google-cloud-sdk/completion.bash.inc'
-PATH=$PATH:/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine
 PATH=$PATH:/usr/local/mysql/bin
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
-export GOPATH=~/Developer/Go
-
-# added by Anaconda2 2.5.0 installer
-export PATH="/Users/aary/anaconda/bin:$PATH"
 
 function gitsubmoduleinit {
     
@@ -77,8 +67,9 @@ function flaskjs {
     printf "Created template web app in folder " && printf $1"\n"
 }
 
-# function cleanup { # why does this not work??
-#     
-#     find . -type f -name "*.pyc" -delete
-#     find . -type f -name "*.DS_Store" -delete
-# }
+# function to create an alias in the .bash_profile
+function calias {
+    local cwd="$(pwd)"
+    printf "alias "$1"=\"cd "$cwd"\"\n" >> ~/.bash_profile
+}
+
