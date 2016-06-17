@@ -3,7 +3,7 @@ set t_Co=256
 
 " Sets tabs to spaces and uses 4 tabs
 :set expandtab
-:set tabstop=4 
+:set tabstop=4
 :set shiftwidth=4
 ":set softtabstop=4
 ":set smarttab
@@ -104,7 +104,7 @@ set visualbell t_vb=
 set showmode
 
 " Wraps cursor around the line so it goes past the end when scrolling
-set whichwrap+=<,>,h,l,[,] 
+set whichwrap+=<,>,h,l,[,]
 
 " Maps : to ; so you can just type ";w" to save, etc. Disabled \'
 nnoremap ; :
@@ -113,7 +113,7 @@ nnoremap ' <nop>
 " Disable 'recording' mode
 nnoremap q <nop>
 " redo mapped to r
-" nnoremap r <C-r> 
+" nnoremap r <C-r>
 " Copy copies to clipboard
 " vmap y "+y
 
@@ -178,14 +178,14 @@ function! ParagraphMove(delta, visual, count)
     let i = 0
     while i < limit
         if a:delta > 0
-            " first whitespace-only line following a non-whitespace character           
+            " first whitespace-only line following a non-whitespace character
             let pos1 = search("\\S", "W")
             let pos2 = search("^\\s*$", "W")
             if pos1 == 0 || pos2 == 0
                 let pos = search("\\%$", "W")
             endif
         elseif a:delta < 0
-            " first whitespace-only line preceding a non-whitespace character           
+            " first whitespace-only line preceding a non-whitespace character
             let pos1 = search("\\S", "bW")
             let pos2 = search("^\\s*$", "bW")
             if pos1 == 0 || pos2 == 0
@@ -218,3 +218,13 @@ au BufNewFile *.html 0r ~/.vim/skeleton/html.skeleton
 
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+" remove all trailing whitespace on file save
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
