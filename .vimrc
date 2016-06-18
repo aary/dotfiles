@@ -36,9 +36,6 @@ let g:netrw_liststyle=3
 " Shows match when cursor goes over bracket
 " set showmatch
 
-" Toggle terminal mode
-noremap <C-d> :sh<cr>
-
 " Jump to function definition when typing <alt>]
 set tags=./.tags;,.tags;
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
