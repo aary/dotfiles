@@ -24,6 +24,7 @@ alias developer="cd ~/Developer"
 alias reinit="source ~/.bash_profile"
 alias gitlistfiles="git ls-tree -r master --name-only"
 alias movies="cd ~/Movies"
+alias .="vim ."
 
 # UofM things
 alias uofm="cd ~/Doc*/U*M"
