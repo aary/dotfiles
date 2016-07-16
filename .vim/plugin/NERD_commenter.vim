@@ -112,7 +112,7 @@ let s:delimiterMap = {
     \ 'clojure': { 'left': ';' },
     \ 'cmake': { 'left': '#' },
     \ 'conkyrc': { 'left': '#' },
-    \ 'cpp': { 'left': '// ', 'leftAlt': '/*', 'rightAlt': '*/' },
+    \ 'cpp': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
     \ 'crontab': { 'left': '#' },
     \ 'cs': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' },
     \ 'csp': { 'left': '--' },

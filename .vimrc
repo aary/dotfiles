@@ -29,6 +29,7 @@ au BufNewFile,BufRead *.thrift set syntax=thrift
 let c_no_curly_error=1
 
 au BufNewFile,BufRead *.go set syntax=go
+au BufNewFile,BufRead *.md set syntax=markdown
 
 " Nerdtree like things
 let g:netrw_liststyle=3
@@ -225,5 +226,9 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-" Set nerd commenter spaces 
+" Set nerd commenter spaces
 let NERDSpaceDelims=1
+
+" Set spell check in files that need spell checking
+au BufRead *.txt set spell
+au BufRead *.md set spell
