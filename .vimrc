@@ -26,6 +26,7 @@ highlight LineNr ctermfg=244
 au BufNewFile,BufRead *.cpp set syntax=cpp11
 au BufNewFile,BufRead *.js set syntax=js
 au BufNewFile,BufRead *.thrift set syntax=thrift
+au BufNewFile,BufRead BUCK set syntax=python
 let c_no_curly_error=1
 
 au BufNewFile,BufRead *.go set syntax=go
@@ -78,7 +79,7 @@ set title
 
 " Shows the line numbers and the ruler at the bottom right of the screen
 " :set number
-:set ruler
+" :set ruler
 
 " Maps escape to "jj"
 :imap jj <Esc>
@@ -232,3 +233,6 @@ let NERDSpaceDelims=1
 " Set spell check in files that need spell checking
 au BufRead *.txt set spell
 au BufRead *.md set spell
+
+" Highlight 80 character lines
+match ErrorMsg '\%>79v.\+'
