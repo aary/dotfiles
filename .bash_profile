@@ -2,7 +2,7 @@
 alias cp="cp -i -v"                             # verbose and safe
 alias mv="mv -i -v"                             # verbose and safe
 alias l="ls -G -l"                              # colorized and long
-alias sl="ls"                                   
+alias sl="ls"
 alias dc="cd"
 alias sublime="open -a Sublime\ Text\ 3"        # sublime text
 alias cl="clear"
@@ -45,6 +45,9 @@ alias eecs281="cd ~/Doc*/UofM/Fall\ 2014/*281*"
 alias g+++="g++ -std=c++14 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 alias gccc="gcc -std=c99 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 
+# map rr to reverse-i-search
+bind '"rr":reverse-search-history'
+
 # Customised and colorized prompt
 export PS1="\u:\W $ "                         # used to be "\h:\W \u\$"
 
@@ -52,7 +55,7 @@ PATH=$PATH:/usr/local/mysql/bin
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
 function gitsubmoduleinit {
-    
+
     git submodule init
     git submodule update
     git submodule foreach git pull origin master
@@ -72,5 +75,7 @@ function flaskjs {
 function calias {
     local cwd="$(pwd)"
     printf "alias "$1"=\"cd "$cwd"\"\n" >> ~/.bash_profile
+    source ~/.bash_profile
+    printf "Created an alias to "$cwd"\n"
 }
 
