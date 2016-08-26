@@ -46,7 +46,7 @@ alias g+++="g++ -std=c++14 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 alias gccc="gcc -std=c99 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 
 # map rr to reverse-i-search
-bind '"rr":reverse-search-history'
+bind '"RR":reverse-search-history'
 
 # Customised and colorized prompt
 export PS1="\u:\W $ "                         # used to be "\h:\W \u\$"
