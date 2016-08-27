@@ -32,7 +32,7 @@ alias gccc="gcc -std=c99 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 bind '"RR":reverse-search-history'
 
 # Customised and colorized prompt
-export PS1="\u:\W $ "                         # used to be "\h:\W \u\$"
+export PS1="$(tput bold)\u:\W$(tput bold) $ "   # used to be "\h:\W \u\$"
 
 PATH=$PATH:/usr/local/mysql/bin
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
