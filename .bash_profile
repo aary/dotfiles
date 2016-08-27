@@ -1,7 +1,7 @@
 # Aliases
 alias cp="cp -i -v"                             # verbose and safe
 alias mv="mv -i -v"                             # verbose and safe
-alias l="ls -G -l"                              # colorized and long
+alias l="ls -G -l -F"                              # colorized and long
 alias sl="ls"
 alias dc="cd"
 alias sublime="open -a Sublime\ Text\ 3"        # sublime text
