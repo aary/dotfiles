@@ -1,9 +1,9 @@
 # Make symlinks to all the relevant things in this directory
-ln -s $(pwd)/.bash_profile ~/.bash_profile
-ln -s $(pwd)/.vimrc ~/.vimrc
-ln -s $(pwd)/.tmux.conf ~/.tmux.conf
-ln -s $(pwd)/.bashrc ~/.bashrc
-ln -s $(pwd)/.vim ~/.vim
+ln -sf $(pwd)/.bash_profile ~/.bash_profile
+ln -sf $(pwd)/.vimrc ~/.vimrc
+ln -sf $(pwd)/.tmux.conf ~/.tmux.conf
+ln -sf $(pwd)/.bashrc ~/.bashrc
+ln -sf $(pwd)/.vim ~/.vim
 
 # make an empty .bash_local file to put all your configurations
 touch ~/.bash_local
