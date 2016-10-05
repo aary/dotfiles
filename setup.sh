@@ -6,11 +6,9 @@ ln -sf $(pwd)/.bashrc ~/.bashrc
 ln -sf $(pwd)/.vim ~/.vim
 
 # make an empty .bash_local file to put all your configurations
-touch ~/.bash_local
-echo "# Put all your local configurations in this file" >> ~/.bash_local
-echo "# ~/.bash_profile and ~/.bashrc are linked to the " >> ~/.bash_local
-echo "# repository you cloned" >> ~/.bash_local
-
-# now reinitialize the shell with the new settings
-source ~/.bash_profile
-
+if [ ! -f ~/.bash_local ]; then
+    touch ~/.bash_local
+    echo "# Put all your local configurations in this file" >> ~/.bash_local
+    echo "# ~/.bash_profile and ~/.bashrc are linked to the " >> ~/.bash_local
+    echo "# repository you cloned" >> ~/.bash_local
+fi
