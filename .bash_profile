@@ -1,7 +1,11 @@
 # Aliases
 alias cp="cp -i -v"                             # verbose and safe
 alias mv="mv -i -v"                             # verbose and safe
-alias l="ls -G -l -F"                              # colorized and long
+if [[ $(uname) == "Linux" ]]; then
+    alias l="ls --color=auto -l -F"                 # colorized and long
+else
+    alias l="ls -G -l -F"
+fi
 alias sl="ls"
 alias dc="cd"
 alias cl="clear"
