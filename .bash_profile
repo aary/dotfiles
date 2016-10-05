@@ -4,12 +4,10 @@ alias mv="mv -i -v"                             # verbose and safe
 alias l="ls -G -l -F"                              # colorized and long
 alias sl="ls"
 alias dc="cd"
-alias sublime="open -a Sublime\ Text\ 3"        # sublime text
 alias cl="clear"
 alias lc="cl"
 alias tree="tree -C -I 'venv'"
 alias cleanup="find . -type f -iname \"*.pyc\" -delete"
-alias college="cd ~/Documents/UofM/Fall\ 2016"
 alias desktop="cd ~/Desktop"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -28,21 +26,8 @@ alias .="vim ."
 alias g+++="g++ -std=c++14 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 alias gccc="gcc -std=c99 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 
-# map rr to reverse-i-search
-bind '"RR":reverse-search-history'
-
 # Customised and colorized prompt
 export PS1="\[$(tput bold)\]\u:\W\[$(tput sgr0)\] $ "
-
-PATH=$PATH:/usr/local/mysql/bin
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
-
-function gitsubmoduleinit {
-
-    git submodule init
-    git submodule update
-    git submodule foreach git pull origin master
-}
 
 # creates a barebones flask js app
 function flaskjs {
@@ -62,3 +47,4 @@ function calias {
     printf "Created an alias to "$cwd"\n"
 }
 
+source ~/.bash_local
