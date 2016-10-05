@@ -27,7 +27,7 @@ alias g+++="g++ -std=c++14 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 alias gccc="gcc -std=c99 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 
 # Customised and colorized prompt
-export PS1="\[$(tput bold)\]\u:\W\[$(tput sgr0)\] $ "
+export PS1="\[$(tput bold)\]$HOSTNAME.\u:\W\[$(tput sgr0)\] $ "
 
 # creates a barebones flask js app
 function flaskjs {
