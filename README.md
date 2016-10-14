@@ -15,7 +15,8 @@ bash setup.sh
 source ~/.bash_profile
 ```
 
-To update your configurations execute the following
+To update your environment to the latest and greatest configurations run the
+following in the folder where you cloned the repository
 
 ```
 git pull origin master
