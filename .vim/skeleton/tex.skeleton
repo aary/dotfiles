@@ -25,6 +25,7 @@
 \setlength{\droptitle}{-4em}
 % \usepackage{concmath}
 % \usepackage[T1]{fontenc}
+\pagenumbering{gobble}
 % ********************************* HEADERS ***********************************
 
 \begin{document}
