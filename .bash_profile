@@ -24,6 +24,7 @@ alias reinit="source ~/.bash_profile"
 alias gitlistfiles="git ls-tree -r master --name-only"
 alias movies="cd ~/Movies"
 alias .="vim ."
+alias grep="grep -n"
 
 # map g++ to g++ -std=c++11
 alias g+++="g++ -std=c++14 -Wall -Werror -Wvla -Wextra -pedantic -O3"
