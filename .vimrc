@@ -235,4 +235,4 @@ au BufRead *.txt set spell
 au BufRead *.md set spell
 
 " Highlight 80 character lines
-match ErrorMsg '\%>79v.\+'
+match ErrorMsg '\%>80v.\+'
