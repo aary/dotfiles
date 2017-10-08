@@ -212,6 +212,7 @@ map <C-k> <C-W>k
 "
 au BufNewFile *.tex 0r ~/.vim/skeleton/tex.skeleton
 au BufNewFile *.hpp 0r ~/.vim/skeleton/hpp.skeleton
+au BufNewFile *.ipp 0r ~/.vim/skeleton/ipp.skeleton
 au BufNewFile *.h 0r ~/.vim/skeleton/hpp.skeleton
 au BufNewFile *.html 0r ~/.vim/skeleton/html.skeleton
 
