@@ -19,6 +19,9 @@ alias developer="cd ~/Developer"
 alias reinit="source ~/.bash_profile"
 alias movies="cd ~/Movies"
 
+# Set vi editing mode
+set -o vi
+
 # map g++ to g++ -std=c++11
 alias g+++="g++ -std=c++14 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 alias gccc="gcc -std=c99 -Wall -Werror -Wvla -Wextra -pedantic -O3"
