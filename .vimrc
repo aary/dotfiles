@@ -211,6 +211,7 @@ map <C-k> <C-W>k
 " ino {<CR> {<CR>}<ESC>O
 "
 au BufNewFile *.tex 0r ~/.vim/skeleton/tex.skeleton
+au BufNewFile test.cpp 0r ~/.vim/skeleton/test.cpp.skeleton
 au BufNewFile *.hpp 0r ~/.vim/skeleton/hpp.skeleton
 au BufNewFile *.ipp 0r ~/.vim/skeleton/ipp.skeleton
 au BufNewFile *.h 0r ~/.vim/skeleton/hpp.skeleton
