@@ -3,5 +3,24 @@
 using std::cout;
 using std::endl;
 
+class Something {
+public:
+    Something() {
+        cout << __PRETTY_FUNCTION__ << endl;
+    }
+    Something(Something&&) {
+        cout << __PRETTY_FUNCTION__ << endl;
+    }
+    Something(const Something&) {
+        cout << __PRETTY_FUNCTION__ << endl;
+    }
+    Something& operator=(const Something&) {
+        cout << __PRETTY_FUNCTION__ << endl;
+    }
+    Something& operator=(Something&&) {
+        cout << __PRETTY_FUNCTION__ << endl;
+    }
+};
+
 int main() {
 }
