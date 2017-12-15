@@ -16,9 +16,11 @@ public:
     }
     Something& operator=(const Something&) {
         cout << __PRETTY_FUNCTION__ << endl;
+        return *this;
     }
     Something& operator=(Something&&) {
         cout << __PRETTY_FUNCTION__ << endl;
+        return *this;
     }
 };
 
