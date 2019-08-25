@@ -14,7 +14,7 @@ runtime! syntax/c.vim
 unlet b:current_syntax
 
 " C++ extensions
-syn keyword cppStatement    new delete this friend using
+syn keyword cppStatement    new delete this friend using co_await co_return co_yield
 syn keyword cppAccess       public protected private
 syn keyword cppModifier     inline virtual explicit export
 syn keyword cppType     bool wchar_t
